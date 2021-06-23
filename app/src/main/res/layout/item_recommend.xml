@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+
+    <com.example.myapplication.views.RoundRectImageView
+        android:layout_width="68dp"
+        android:layout_height="65dp"
+        android:id="@+id/album_cover"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:scaleType="fitXY"></com.example.myapplication.views.RoundRectImageView>
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/album_cover"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="5dp"
+            android:text="标题"
+            android:id="@+id/album_title_tv"
+            android:textSize="18sp"
+            android:textColor="@color/black"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:id="@+id/album_description_tv"
+            android:text="内容的发射点犯fsdfdff 得上反对反对打发士大夫的方法"
+            android:textSize="12sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:src="@mipmap/play_info_icon"></ImageView>
+
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="10dp"
+                    android:id="@+id/album_play_cound"
+                    android:text="23"
+                    android:textSize="7sp"
+                    android:layout_marginLeft="2dp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:src="@mipmap/ic_sound"></ImageView>
+
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="10dp"
+                    android:text="23"
+                    android:id="@+id/album_contant_size"
+                    android:textSize="7sp"
+                    android:layout_marginLeft="2dp"></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

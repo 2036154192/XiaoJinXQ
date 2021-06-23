@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailActivity">
+
+    <ImageView
+        android:id="@+id/iv_large_cover"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/subscription_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/iv_large_cover">
+
+        <TextView
+            android:id="@+id/detail_sub_btn"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:text="+订阅"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/shape_subscription_bg" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/paly_01"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/subscription_container"
+        android:background="#EBE8E8">
+
+        <ImageView
+            android:id="@+id/detail_play_control"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/play_icon" />
+
+        <TextView
+            android:id="@+id/play_control_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="140dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_toRightOf="@+id/detail_play_control"
+            android:textSize="14sp"
+            android:text="继续播放" />
+
+        <ImageView
+            android:id="@+id/detail_arrow"
+            android:layout_width="13dp"
+            android:layout_height="8dp"
+            android:src="@mipmap/arrow_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/detail_arrow"
+            android:text="选集" />
+
+    </RelativeLayout>
+
+    <com.example.myapplication.views.RoundRectImageView
+        android:id="@+id/iv_small_cover"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/iv_large_cover"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-40dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_large_cover"
+        android:layout_marginTop="-30dp"
+        android:layout_toRightOf="@+id/iv_small_cover"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_album_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="标题" />
+
+        <TextView
+            android:id="@+id/tv_album_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/sub_text_title"
+            android:text="作者" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/detail_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/paly_01"></FrameLayout>
+
+</RelativeLayout>

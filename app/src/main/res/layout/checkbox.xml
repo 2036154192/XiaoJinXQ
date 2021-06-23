@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="170dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_confirm_dialog_bg">
+
+        <TextView
+            android:id="@+id/dialog_tips_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:text="删除当前历史记录" />
+
+        <CheckBox
+            android:id="@+id/dialog_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_tips_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:text="是否清除全部历史记录" />
+
+        <LinearLayout
+            android:id="@+id/dialog_button_contaie"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dialog_cancel_sub"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#c5c0c0"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="确认删除" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#dfdfdf" />
+
+            <TextView
+                android:id="@+id/dialog_give_up"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/main_color"
+                android:text="我再想想" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dfdfdf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dfdfdf"
+            android:layout_above="@+id/dialog_button_contaie"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
